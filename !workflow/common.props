@@ -1,0 +1,26 @@
+﻿<Project>
+  <PropertyGroup Label="Folders">
+    <WorkspaceDir Condition=" '$(WorkspaceDir)' == '' ">$(SolutionDir).ws\</WorkspaceDir>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Signing" Condition=" '$(Configuration)' == 'Debug' or '$(Configuration)' == 'Release'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>$(SolutionDir)!workflow\development.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Signing" Condition=" '$(Configuration)' == 'Release+Pack+Certify' ">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Packaging">
+    <Company>Aftertime Ventures Inc.</Company>
+    <Copyright>Aftertime Ventures Inc. (c) 2018</Copyright>
+    <Authors>Eduard Malakhov &lt;eduard.malakhov@aftertimeventures.com&gt;</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Packaging" Condition=" '$(Configuration)' == 'Release+Pack' or '$(Configuration)' == 'Release+Pack+Certify' ">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+</Project>

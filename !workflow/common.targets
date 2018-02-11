@@ -1,0 +1,28 @@
+﻿<Project>
+  <PropertyGroup Label="Build">
+    <BaseOutDir>$(WorkspaceDir)out\</BaseOutDir>
+    <IntermediateOutDir>$(WorkspaceDir)\int\$(Configuration)\$(ProjectName)\$(MSBuildProjectName)\</IntermediateOutDir>
+    <OutDir>$(IntermediateOutDir)</OutDir>
+    <BaseBinariesOutDir>$(BaseOutDir)bin\</BaseBinariesOutDir>
+    <BaseSymbolsOutDir>$(BaseOutDir)sym\</BaseSymbolsOutDir>
+    <BinaryOutputSubFolderName Condition=" '$(BinaryOutputType)' == 'library' ">libraries</BinaryOutputSubFolderName>
+    <BinaryOutputSubFolderName Condition=" '$(BinaryOutputType)' == 'tests' ">tests</BinaryOutputSubFolderName>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);ConfigureBuild;</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+
+  <Target Name="ConfigureBuild" BeforeTargets="CoreCompile;GetTargetPath;GetTargetFrameworkProperties;_GetBuildOutputFilesWithTfm;BuiltProjectOutputGroup;AllProjectOutputGroups;">
+    <PropertyGroup Label="Build">
+      <OutDir>$(BaseBinariesOutDir)$(Configuration)\$(TargetFramework)\$(BinaryOutputSubFolderName)\</OutDir>
+      <TargetPath>$(OutDir)$(TargetName)$(TargetExt)</TargetPath>
+      <SymbolsDir>$(BaseSymbolsOutDir)$(Configuration)\$(TargetFramework)\$(BinaryOutputSubFolderName)\</SymbolsDir>
+    </PropertyGroup>
+  </Target>
+
+  <Target Name="CopySymbols" AfterTargets="Build">
+    <ItemGroup>
+      <SymbolFile Include="$(IntermediateOutDir)*.pdb"/>
+    </ItemGroup>
+    
+    <Copy SourceFiles="@(SymbolFile)" DestinationFolder="$(SymbolsDir)"/>
+  </Target>
+</Project>

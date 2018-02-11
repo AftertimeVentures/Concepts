@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$(SolutionDir)!workflow\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <BinaryOutputType>library</BinaryOutputType>
+    <Configurations>Debug;Release;Release+Pack;Release+Pack+Certify</Configurations>
+  </PropertyGroup>
+
+  <Import Project="$(SolutionDir)!workflow\common.targets" />
+
+</Project>
