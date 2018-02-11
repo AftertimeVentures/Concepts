@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+#   libraries
+/libraries/Algebra/obj
+/libraries/Algebra/bin
+/libraries/Physics/obj
+/libraries/Physics/bin
+
+#   tests
+/tests/Algebra-UnitTests/obj
+/tests/Algebra-UnitTests/bin
+/tests/Physics-UnitTests/obj
+/tests/Physics-UnitTests/bin
