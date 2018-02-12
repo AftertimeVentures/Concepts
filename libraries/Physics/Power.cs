@@ -6,9 +6,21 @@ namespace Aftertime.Concepts.Physics
 {
     public partial struct Power
     {
+        private Power(double valueInWatts)
+        {
+            if (valueInWatts < 0)
+            {
+                throw new NonNegativeValueExpectedException(valueInWatts);
+            }
+
+            _valueInWatts = valueInWatts;
+        }
+
         public static Power FromWatts(double value)
         {
-            throw new NotImplementedException();
+            return new Power(value);
         }
+
+        private double _valueInWatts;
     }
 }

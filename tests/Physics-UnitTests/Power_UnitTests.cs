@@ -8,11 +8,12 @@ namespace Aftertime.Concepts.Physics
 {
     public sealed class Power_UnitTests
     {
-        [Fact]
-        void Power__FromWatts__Succeds()
+        [Theory]
+        [InlineData(0.0)]
+        [InlineData(1000.0)]
+        void Power__FromWatts__NonNegative__Succeds(double valueInWatts)
         {
             //  Prepare
-            double valueInWatts = 100;
 
             //  Pre-validate
 
@@ -20,6 +21,21 @@ namespace Aftertime.Concepts.Physics
             Power power = Power.FromWatts(valueInWatts);
             //  Post-validate
 
+        }
+
+        [Fact]
+        void Power__FromWatts__Negative__Fails()
+        {
+            //  Prepare
+            double valueInWatts = -100;
+
+            //  Pre-validate
+
+            //  Perform
+            NonNegativeValueExpectedException ex = Assert.Throws<NonNegativeValueExpectedException>(() => Power.FromWatts(valueInWatts));
+
+            //  Post-validate
+            Assert.Equal(valueInWatts, ex.Value);
         }
     }
 }
