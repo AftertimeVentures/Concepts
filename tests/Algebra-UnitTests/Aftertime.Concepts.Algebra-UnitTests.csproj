@@ -10,6 +10,8 @@
     <BinaryOutputType>tests</BinaryOutputType>
 
     <Configurations>Debug;Release;Release+Pack;Release+Pack+Certify</Configurations>
+
+    <RootNamespace>Aftertime.Concepts.Algebra</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
