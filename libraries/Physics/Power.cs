@@ -6,7 +6,7 @@ namespace Aftertime.Concepts.Physics
 {
     public partial struct Power
     {
-        public static Power FromWatts()
+        public static Power FromWatts(double value)
         {
             throw new NotImplementedException();
         }
