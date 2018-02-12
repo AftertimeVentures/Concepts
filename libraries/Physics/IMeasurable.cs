@@ -10,6 +10,7 @@ namespace Aftertime.Concepts.Physics
     }
 
     public interface IMeasurable<TUnits>
+        : IMeasurable
     {
         string ToUnitsString(TUnits units);
     }
