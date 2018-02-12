@@ -1,12 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
+
   <Import Project="$(SolutionDir)!workflow\common.props" />
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
     <BinaryOutputType>tests</BinaryOutputType>
+
     <Configurations>Debug;Release;Release+Pack;Release+Pack+Certify</Configurations>
+
+    <RootNamespace>Aftertime.Concepts.Algebra</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\libraries\Physics\Aftertime.Concepts.Physics.csproj" />
+    <ProjectReference Include="..\..\libraries\Algebra\Aftertime.Concepts.Algebra.csproj" />
   </ItemGroup>
 
   <Import Project="$(SolutionDir)!workflow\common.targets" />

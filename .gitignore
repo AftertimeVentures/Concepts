@@ -10,8 +10,8 @@
 /libraries/Physics/bin
 
 #   tests
-/tests/Algebra-UnitTests/obj
-/tests/Algebra-UnitTests/bin
-/tests/Physics-UnitTests/obj
-/tests/Physics-UnitTests/bin
+/tests/Algebra-Tests/obj
+/tests/Algebra-Tests/bin
+/tests/Physics-Tests/obj
+/tests/Physics-Tests/bin
 /.ws
