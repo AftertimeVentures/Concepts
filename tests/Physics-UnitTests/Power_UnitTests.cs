@@ -37,5 +37,20 @@ namespace Aftertime.Concepts.Physics
             //  Post-validate
             Assert.Equal(valueInWatts, ex.Value);
         }
+
+        [Fact]
+        public void Power__ToWatts__returnss_0__when_initialized_by_default()
+        {
+            //  Prepare
+            Power value = default(Power);
+
+            //  Pre-validate
+
+            //  Perform
+            double valueInWatts = value.ToWatts();
+
+            //  Post-validate
+            Assert.Equal(0, valueInWatts);
+        }
     }
 }

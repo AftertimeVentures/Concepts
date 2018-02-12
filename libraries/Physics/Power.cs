@@ -16,6 +16,11 @@ namespace Aftertime.Concepts.Physics
             _valueInWatts = valueInWatts;
         }
 
+        public double ToWatts()
+        {
+            return _valueInWatts;
+        }
+
         public static Power FromWatts(double value)
         {
             return new Power(value);
