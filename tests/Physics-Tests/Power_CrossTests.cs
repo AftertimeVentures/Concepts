@@ -9,7 +9,7 @@ namespace Aftertime.Concepts.Physics
     public sealed class Power_CrossTests
     {
         [Fact]
-        public void Power__FromWatts__ToWatts__gives_original_value()
+        public void Power__FromWatts__then__ToWatts__gives_original_value()
         {
             //  Prepare
             double valueInWatts = 1000;
