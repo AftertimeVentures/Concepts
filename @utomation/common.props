@@ -6,7 +6,7 @@
   <PropertyGroup Label="Signing" Condition=" '$(Configuration)' == 'Debug' or '$(Configuration)' == 'Release'">
     <SignAssembly>true</SignAssembly>
     <DelaySign>false</DelaySign>
-    <AssemblyOriginatorKeyFile>$(SolutionDir)!workflow\development.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>$(SolutionDir)@utomation\development.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Label="Signing" Condition=" '$(Configuration)' == 'Release+Pack+Certify' ">
