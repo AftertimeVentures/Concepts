@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$(SolutionDir)!workflow\common.props" />
+  <Import Project="$(SolutionDir)@utomation\common.props" />
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -24,6 +24,6 @@
     <ProjectReference Include="..\..\libraries\Algebra\Aftertime.Concepts.Algebra.csproj" />
   </ItemGroup>
 
-  <Import Project="$(SolutionDir)!workflow\common.targets" />
+  <Import Project="$(SolutionDir)@utomation\common.targets" />
 
 </Project>

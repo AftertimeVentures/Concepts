@@ -15,11 +15,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aftertime.Concepts.Algebra-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aftertime.Concepts.Physics-Tests", "tests\Physics-Tests\Aftertime.Concepts.Physics-Tests.csproj", "{80AF4ABC-62FE-459E-A5D3-87984294ACD1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!workflow", "!workflow", "{2B4C2A1F-3E64-4752-B439-01682C1163B2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "@utomation", "@utomation", "{7DC8C159-F943-4EEA-A6F3-752FABDE3A30}"
 	ProjectSection(SolutionItems) = preProject
-		!workflow\common.props = !workflow\common.props
-		!workflow\common.targets = !workflow\common.targets
-		!workflow\development.snk = !workflow\development.snk
+		@utomation\common.props = @utomation\common.props
+		@utomation\common.targets = @utomation\common.targets
+		@utomation\CommonAssemblyAttributes.cs = @utomation\CommonAssemblyAttributes.cs
+		@utomation\development.snk = @utomation\development.snk
 	EndProjectSection
 EndProject
 Global
