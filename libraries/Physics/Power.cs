@@ -4,7 +4,13 @@ using System.Text;
 
 namespace Aftertime.Concepts.Physics
 {
+    public enum PowerUnits
+    {
+        Watt,
+    }
+
     public partial struct Power
+        : IMeasurable<PowerUnits>
     {
         private Power(double valueInWatts)
         {
@@ -25,6 +31,16 @@ namespace Aftertime.Concepts.Physics
         {
             return new Power(value);
         }
+
+        public string ToUnitsString()
+        {
+            return ToUnitsString(PowerUnits.Watt);
+        }
+        public string ToUnitsString(PowerUnits units)
+        {
+            return $"{_valueInWatts} W";
+        }
+
 
         private double _valueInWatts;
     }

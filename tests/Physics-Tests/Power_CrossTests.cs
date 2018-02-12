@@ -23,5 +23,21 @@ namespace Aftertime.Concepts.Physics
             //  Post-validate
             Assert.Equal(valueInWatts, newValueInWatts);
         }
+
+        [Fact]
+        void Power__FromWatts__then__ToUnitsString_1__returns_string_in_watts()
+        {
+            //  Prepare
+            double valueInWatts = 100;
+
+            //  Pre-validate
+
+            //  Perform
+            Power value = Power.FromWatts(valueInWatts);
+            string powerAsString = value.ToUnitsString();
+
+            //  Post-validate
+            Assert.Equal($"{valueInWatts} W", powerAsString);
+        }
     }
 }
