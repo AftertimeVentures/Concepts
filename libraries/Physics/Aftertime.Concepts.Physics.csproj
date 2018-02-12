@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$(SolutionDir)!workflow\common.props" />
+  <Import Project="$(SolutionDir)@utomation\common.props" />
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -8,6 +8,6 @@
     <Configurations>Debug;Release;Release+Pack;Release+Pack+Certify</Configurations>
   </PropertyGroup>
 
-  <Import Project="$(SolutionDir)!workflow\common.targets" />
+  <Import Project="$(SolutionDir)@utomation\common.targets" />
 
 </Project>
