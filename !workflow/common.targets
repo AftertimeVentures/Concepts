@@ -2,8 +2,6 @@
   <PropertyGroup Label="Build">
     <BaseOutDir>$(WorkspaceDir)out\</BaseOutDir>
     <IntermediateOutDir>$(WorkspaceDir)\int\$(Configuration)\$(ProjectName)\$(MSBuildProjectName)\</IntermediateOutDir>
-    <!--<BaseIntermediateOutputPath>$(IntermediateOutDir)</BaseIntermediateOutputPath>-->
-    <!--<OutDir>$(IntermediateOutDir)</OutDir>-->
     <BaseBinariesOutDir>$(BaseOutDir)bins\</BaseBinariesOutDir>
     <BaseSymbolsOutDir>$(BaseOutDir)smbs\</BaseSymbolsOutDir>
     <BinaryOutputSubFolderName Condition=" '$(BinaryOutputType)' == 'library' ">libraries</BinaryOutputSubFolderName>
@@ -11,14 +9,4 @@
     <PackageOutputPath>$(BaseOutDir)pkgs\</PackageOutputPath>
     <OutDir>$(BaseBinariesOutDir)$(Configuration)\$(BinaryOutputSubFolderName)\$(TargetFramework)\</OutDir>
   </PropertyGroup>
-
-  <!--<Target Name="CopySymbols" AfterTargets="CoreCompile">
-    <ItemGroup>
-      <SymbolFile Include="$(IntermediateOutDir)*.pdb"/>
-    </ItemGroup>
-
-    <Message Text="SymbolsDir = '$(SymbolsDir)'"/>
-    
-    <Copy SourceFiles="@(SymbolFile)" DestinationFolder="$(SymbolsDir)" Condition=" '@(SymbolFile)' != '' " />
-  </Target>-->
 </Project>
